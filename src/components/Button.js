@@ -3,23 +3,17 @@ import {Text, StyleSheet, View, TouchableOpacity} from 'react-native';
 
 export default class Button extends Component {
   render() {
-    const {label, click} = this.props;
+    const {onPress, label} = this.props;
     return (
       <TouchableOpacity
-        onPress={click}
+        onPress={onPress}
         style={{
-          backgroundColor: '#028CCE',
+          backgroundColor: '#1F90EB',
+          marginTop: 10,
           paddingVertical: 10,
-          paddingHorizontal: 20,
           alignItems: 'center',
         }}>
-        <Text
-          style={{
-            color: 'white',
-            fontWeight: 'bold',
-            fontSize: 18,
-            letterSpacing: 0.5,
-          }}>
+        <Text style={{fontSize: 18, color: 'white', fontWeight: 'bold'}}>
           {label}
         </Text>
       </TouchableOpacity>
